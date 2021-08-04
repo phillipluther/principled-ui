@@ -1,0 +1,29 @@
+{
+  "name": "principled-ui",
+  "version": "0.1.0",
+  "description": "A deeply personal and specifically handy component library so I can stop making so damned many buttons.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phillipluther/principled-ui.git"
+  },
+  "keywords": [
+    "component",
+    "library",
+    "ui"
+  ],
+  "author": "Phillip Luther <dev@phillipluther.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phillipluther/principled-ui/issues"
+  },
+  "homepage": "https://github.com/phillipluther/principled-ui#readme",
+  "workspaces": [
+    "packages/theme",
+    "packages/vanilla",
+    "packages/react"
+  ]
+}
