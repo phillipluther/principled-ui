@@ -1,20 +1,14 @@
 import { css} from '@emotion/css';
 
-export const ResetText = css`
+export const resetText = css`
   font-family: inherit;
   font-size: inherit;
   line-height: 1;
 `;
 
-export const ResetMargin = css`
+export const resetSpacing = css`
+  padding: 0;
   margin: 0;
 `;
 
-export const ResetPadding = css`
-  padding: 0;
-`;
 
-export const ResetSpacing = css`
-  ${ResetMargin};
-  ${ResetPadding};
-`;
