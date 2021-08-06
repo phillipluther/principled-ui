@@ -1,32 +1,17 @@
 import { css } from '@emotion/css';
 import { resetText } from '../resets';
+import { focusRing } from './focus-outline';
 import { KB_ACTIVE_CLASS } from '../handle-keyboard-nav';
 
 const buttonBase = css`
   ${resetText};
+  ${focusRing};
   margin: 0;
   padding: 0 16px;
   line-height: 46px;
   border: 1px solid transparent;
   white-space: nowrap;
   outline: 0;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  &:hover,
-  .kb-active &:focus {
-    &::before {
-      border: 2px solid black;
-    }
-  }
 `;
 
 export const primaryButtonStyles = css`
