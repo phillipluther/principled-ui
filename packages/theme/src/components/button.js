@@ -8,8 +8,8 @@ const buttonBase = css`
   ${focusRing};
   margin: 0;
   padding: 0 16px;
-  line-height: 46px;
-  border: 1px solid transparent;
+  line-height: 44px;
+  border: 2px solid transparent;
   white-space: nowrap;
   outline: 0;
 `;
