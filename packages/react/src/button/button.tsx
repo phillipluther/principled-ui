@@ -36,6 +36,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
+      data-testid="pui-button"
       type={type}
       className={buttonClasses.join(' ')}
       {...buttonProps}

@@ -18,8 +18,6 @@ export default function handleKeyboardNav() {
       window.removeEventListener('keydown', activateKeyboardNav);
 
       document.body.classList.add(KB_NAV_CLASS);
-
-      console.log('Activating KB');
     }
   }
 
@@ -28,8 +26,6 @@ export default function handleKeyboardNav() {
     window.addEventListener('keydown', activateKeyboardNav);
 
     document.body.classList.remove(KB_NAV_CLASS);
-
-    console.log('Deactivating KB');
   }
 
   // starts disabled
