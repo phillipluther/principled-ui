@@ -3,7 +3,11 @@ import {
   buttonStyles,
   primaryButtonStyles,
   blankButtonStyles,
+  handleKeyboardNav,
 } from '@principled/theme';
+
+// TODO: not feelin' great about this as a side-effect; do better
+handleKeyboardNav();
 
 export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
