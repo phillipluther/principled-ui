@@ -3,11 +3,8 @@ import {
   buttonStyles,
   primaryButtonStyles,
   blankButtonStyles,
-  handleKeyboardNav,
+  useKeyboardNavClassHook,
 } from '@principled/theme';
-
-// TODO: not feelin' great about this as a side-effect; do better
-handleKeyboardNav();
 
 export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
@@ -24,6 +21,8 @@ const Button: React.FC<ButtonProps> = ({
   children,
   ...buttonProps
 }) => {
+  React.useEffect(useKeyboardNavClassHook);
+
   const buttonClasses = [className];
 
   if (primary) {

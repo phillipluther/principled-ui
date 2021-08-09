@@ -9,6 +9,8 @@ const pseudoElementBase = css`
   left: -4px;
 `;
 
+// TODO: figure out how to interpolate the KB_NAV_CLASS var from use-keyboard-nav-class-hook.js;
+// a straight up template literal interpolation doesn't seem to work ${KB_NAV_CLASS}
 export const focusRing = css`
   position: relative;
 
