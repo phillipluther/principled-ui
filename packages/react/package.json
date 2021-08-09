@@ -55,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/phillipluther/principled-ui/issues"
   },
-  "homepage": "https://github.com/phillipluther/principled-ui#readme"
+  "homepage": "https://github.com/phillipluther/principled-ui#readme",
+  "dependencies": {
+    "classnames": "^2.3.1"
+  }
 }

@@ -1,7 +1,6 @@
 import { css } from '@emotion/css';
-import { resetText } from '../resets';
+import { resetText } from '../helpers/resets';
 import { focusRing } from './focus-outline';
-import { KB_ACTIVE_CLASS } from '../handle-keyboard-nav';
 
 const buttonBase = css`
   ${resetText};
