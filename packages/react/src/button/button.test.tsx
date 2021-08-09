@@ -8,14 +8,18 @@ import { render } from '@testing-library/react';
 import Button, { ButtonProps } from './button';
 
 describe('Button', () => {
-  let props: ButtonProps;
+  const getRendered = (props = {}) => {
+    const { getByTestId } = render(<Button {...props}>Button</Button>);
+    return getByTestId('pui-button');
+  };
 
-  const renderComponent = () => render(<Button {...props}>Button</Button>);
-
-  it('should default to type="button"', () => {
-    const { getByTestId } = renderComponent();
-    const button = getByTestId('pui-button');
-
+  it('defaults to type="button"', () => {
+    const button = getRendered();
     expect(button).toHaveAttribute('type', 'button');
+  });
+
+  it('takes a specified type', () => {
+    const button = getRendered({ type: 'submit' });
+    expect(button).toHaveAttribute('type', 'submit');
   });
 });

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classnames from 'classnames';
 import {
   buttonStyles,
   primaryButtonStyles,
@@ -23,21 +24,17 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   React.useEffect(useKeyboardNavClassHook);
 
-  const buttonClasses = [className];
-
-  if (primary) {
-    buttonClasses.unshift(primaryButtonStyles);
-  } else if (blank) {
-    buttonClasses.unshift(blankButtonStyles);
-  } else {
-    buttonClasses.unshift(buttonStyles);
-  }
+  const buttonClasses = classnames({
+    [primaryButtonStyles]: primary,
+    [blankButtonStyles]: blank,
+    [buttonStyles]: !primary && !blank,
+  }, className);
 
   return (
     <button
       data-testid="pui-button"
       type={type}
-      className={buttonClasses.join(' ')}
+      className={buttonClasses}
       {...buttonProps}
     >
       {children}
