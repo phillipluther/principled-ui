@@ -29,7 +29,7 @@ function useKeyboardNavClassHook() {
 
 export default () => {
   if ((typeof window === 'undefined') || isInitialized) {
-    console.log('`useKeyboardNavClassHook` is already initialized');
+    // console.log('`useKeyboardNavClassHook` is already initialized');
     return;
   }
 

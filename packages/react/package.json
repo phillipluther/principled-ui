@@ -34,8 +34,8 @@
     "prebuild": "npm run clean",
     "build": "rollup -c",
     "clean": "rm -rf dist",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage",
     "storybook": "BROWSER=none start-storybook -p 8001"
   },
   "repository": {

@@ -3,21 +3,24 @@ import classnames from 'classnames';
 import { visuallyHiddenStyles } from '@principled/theme';
 
 export interface VisuallyHiddenProps {
-  as?: string;
+  as?: keyof JSX.IntrinsicElements;
   className?: string;
 }
 
 const VisuallyHidden: React.FC<VisuallyHiddenProps> = ({
-  as,
+  as: TagName = 'span',
   className,
   children,
   ...props
 }) => {
-  const Tag = as || 'span';
   const classes = classnames(visuallyHiddenStyles, className);
 
   return (
-    <Tag className={classes} {...props}>{children}</Tag>
+    <TagName
+      data-testid="pui-visually-hidden"
+      className={classes}
+      {...props}
+    >{children}</TagName>
   );
 };
 
