@@ -4,6 +4,7 @@
   "description": "A deeply personal and specifically handy component library so I can stop making so damned many buttons.",
   "main": "index.js",
   "scripts": {
+    "dev:react": "npm run watch -w packages/theme && npm run storybook -w packages/react",
     "test": "jest"
   },
   "repository": {

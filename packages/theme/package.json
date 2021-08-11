@@ -8,8 +8,7 @@
     "prebuild": "npm run clean",
     "build": "babel src -d dist",
     "watch": "babel src -d dist -w",
-    "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",

@@ -11,4 +11,8 @@ export const resetSpacing = css`
   margin: 0;
 `;
 
+export const borderBox = css`
+  box-sizing: border-box;
+`;
+
 

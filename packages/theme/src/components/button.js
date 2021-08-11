@@ -1,8 +1,9 @@
 import { css } from '@emotion/css';
-import { resetText } from '../helpers/resets';
-import { focusRing } from './focus-outline';
+import { borderBox, resetText } from '../helpers/resets';
+import { focusRing } from '../helpers/focus-indicators';
 
 const buttonBase = css`
+  ${borderBox};
   ${resetText};
   ${focusRing};
   margin: 0;
