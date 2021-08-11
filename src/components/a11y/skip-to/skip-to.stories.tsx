@@ -4,7 +4,7 @@ import { Story } from '@storybook/react';
 import SkipTo, { SkipToProps } from './skip-to';
 
 export default {
-  title: 'Components/Skip-To',
+  title: 'Components/A11y/Skip-To',
   component: SkipTo,
 } as Meta;
 
