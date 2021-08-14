@@ -1,5 +1,9 @@
 import * as React from 'react';
-import { css, jsx } from '@emotion/react';
+import styled from '@emotion/styled';
+import { FocusOutline } from '../focus-indicator';
+
+const SkipToAnchor = styled(FocusOutline)`
+`;
 
 export interface SkipToProps {
   label?: string;
@@ -7,14 +11,7 @@ export interface SkipToProps {
 }
 
 const SkipTo: React.FC<SkipToProps> = ({ label, id }) => (
-  <a
-    href={`#${id}`}
-    css={css`
-      font-size: 1.2rem;
-      color: green;
-      text-decoration: none;
-    `}
-  >
+  <a href={`#${id}`} data-testid="skipto">
     {label || `Skip to ${id}`}
   </a>
 );
