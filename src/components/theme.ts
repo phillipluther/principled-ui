@@ -25,5 +25,7 @@ export const extendedPalette = {
 
 // the kitchen sink
 export default {
-  ...extendedPalette,
+  colors: {
+    ...extendedPalette,
+  },
 }
