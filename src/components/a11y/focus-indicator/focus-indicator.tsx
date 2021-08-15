@@ -17,7 +17,8 @@ const FocusIndicatorBase = styled.a`
     content: '';
     position: absolute;
     display: block;
-    transition: transform 360ms ease-both, border 240ms;
+    opacity: 0;
+    transition: transform 120ms ease-in, opacity 120ms;
   }
 `;
 
@@ -29,11 +30,12 @@ const FocusOutline = styled(FocusIndicatorBase)`
     left: -4px;
     border-radius: 4px;
     border: 0;
-    transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.9, 0.9, 1);
   }
 
   &:focus::before {
     transform: scale3d(1, 1, 1);
+    opacity: 1;
     border: 2px solid ${(props) => props.theme.colors.linkColor};
   }
 `;
@@ -50,6 +52,7 @@ const FocusUnderline = styled(FocusIndicatorBase)`
 
   &:focus::before {
     transform: scaleX(1);
+    opacity: 1;
   }
 `;
 
