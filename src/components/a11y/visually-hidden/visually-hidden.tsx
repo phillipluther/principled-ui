@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { css } from '@emotion/react';
+import styled from 'styled-components';
 
 export interface VisuallyHiddenProps {
   as?: keyof JSX.IntrinsicElements;
