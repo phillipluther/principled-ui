@@ -15,3 +15,7 @@ export const Underline = () => (
 export const Outline = () => (
   <FocusIndicator tabIndex="0" outline>Focus Indicator Outline</FocusIndicator>
 );
+
+export const CustomTag = () => (
+  <FocusIndicator as="button" outline>Focus Indicator as Custom Tag</FocusIndicator>
+);

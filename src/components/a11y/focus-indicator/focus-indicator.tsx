@@ -2,6 +2,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { extendedPalette } from '../../theme';
 
+const commonTransition = 'transition: transform 120ms ease-in, opacity 120ms';
+
 const FocusIndicatorBase = styled.a`
   position: relative;
   color: inherit;
@@ -18,7 +20,7 @@ const FocusIndicatorBase = styled.a`
     position: absolute;
     display: block;
     opacity: 0;
-    transition: transform 120ms ease-in, opacity 120ms;
+    ${commonTransition};
   }
 `;
 
@@ -29,14 +31,16 @@ const FocusOutline = styled(FocusIndicatorBase)`
     bottom: -4px;
     left: -4px;
     border-radius: 4px;
-    border: 0;
+    border: 2px solid ${(props) => props.theme.colors.linkColor};
     transform: scale3d(0.9, 0.9, 1);
+    ${commonTransition + ', border-width 0ms ease 120ms'};
   }
 
   &:focus::before {
     transform: scale3d(1, 1, 1);
     opacity: 1;
-    border: 2px solid ${(props) => props.theme.colors.linkColor};
+    border-width: 2px;
+    ${commonTransition};
   }
 `;
 
@@ -62,7 +66,7 @@ export interface FocusIndicatorProps {
   theme?: any;
 }
 
-const FocusIndicator: React.FC<FocusIndicatorProps> = ({ as, children, outline, ...props }) => {
+const FocusIndicator: React.FC<FocusIndicatorProps> = ({ children, outline, ...props }) => {
   const IndicatorType = outline ? FocusOutline : FocusUnderline;
 
   return (
