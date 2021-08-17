@@ -6,8 +6,8 @@
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test": "jest --collectCoverage",
+    "test:watch": "jest --watch --collectCoverage",
     "storybook": "BROWSER=none start-storybook -p 8000",
     "build-storybook": "build-storybook",
     "build": "rollup -c"

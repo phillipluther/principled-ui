@@ -21,11 +21,27 @@ export const extendedPalette = {
   ...palette,
   linkColor: palette.colorAccent,
   linkColorActive: palette.colorAccentDark,
+  primaryBg: 'white',
+}
+
+export const spacers = {
+  // random-ass system based'ish on 16px and 1.6 scaling? psh, why not.
+  xs: '6px',
+  sm: '10px',
+  md: '16px',
+  lg: '26px',
+  xl: '42px',
 }
 
 // the kitchen sink
 export default {
   colors: {
     ...extendedPalette,
+  },
+  padding: {
+    ...spacers,
+  },
+  margin: {
+    ...spacers,
   },
 }

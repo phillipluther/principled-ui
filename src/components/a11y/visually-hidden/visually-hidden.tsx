@@ -5,18 +5,7 @@ export interface VisuallyHiddenProps {
   as?: keyof JSX.IntrinsicElements;
 }
 
-const VisuallyHidden: React.FC<VisuallyHiddenProps> = ({
-  as: TagName = 'span',
-  children,
-  ...props
-}) => (
-  <TagName
-    data-testid="pui-visually-hidden"
-    {...props}
-  >{children}</TagName>
-);
-
-export default styled(VisuallyHidden)`
+const Styled = styled.span`
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -28,3 +17,15 @@ export default styled(VisuallyHidden)`
   width: 1px;
   word-wrap: normal !important;
 `;
+
+const VisuallyHidden: React.FC<VisuallyHiddenProps> = ({
+  children,
+  ...props
+}) => (
+  <Styled
+    data-testid="pui-visually-hidden"
+    {...props}
+  >{children}</Styled>
+);
+
+export default VisuallyHidden;

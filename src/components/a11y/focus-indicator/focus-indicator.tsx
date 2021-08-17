@@ -68,9 +68,10 @@ export interface FocusIndicatorProps {
 
 const FocusIndicator: React.FC<FocusIndicatorProps> = ({ children, outline, ...props }) => {
   const IndicatorType = outline ? FocusOutline : FocusUnderline;
+  const testId = outline ? 'pui-focus-outline' : 'pui-focus-underline';
 
   return (
-    <IndicatorType {...props}>
+    <IndicatorType data-testid={testId} {...props}>
       {children}
     </IndicatorType>
   );
