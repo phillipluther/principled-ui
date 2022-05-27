@@ -26,13 +26,13 @@ const FocusIndicatorBase = styled.a`
 
 const FocusOutline = styled(FocusIndicatorBase)`
   &::before {
-    top: -4px;
-    right: -4px;
-    bottom: -4px;
-    left: -4px;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
     border-radius: 4px;
     border: 2px solid ${(props) => props.theme.colors.linkColor};
-    transform: scale3d(0.9, 0.9, 1);
+    transform: scale3d(1.05, 1.05, 1);
     ${commonTransition + ', border-width 0ms ease 120ms'};
   }
 
@@ -64,6 +64,7 @@ export interface FocusIndicatorProps {
   as?: keyof JSX.IntrinsicElements;
   outline?: boolean;
   theme?: any;
+  href?: string;
 }
 
 const FocusIndicator: React.FC<FocusIndicatorProps> = ({ children, outline, ...props }) => {
@@ -75,7 +76,7 @@ const FocusIndicator: React.FC<FocusIndicatorProps> = ({ children, outline, ...p
       {children}
     </IndicatorType>
   );
-}
+};
 
 export default FocusIndicator;
 
@@ -84,4 +85,3 @@ FocusIndicator.defaultProps = {
     colors: extendedPalette,
   },
 };
-
