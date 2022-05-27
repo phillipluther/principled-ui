@@ -11,7 +11,6 @@ You get it.
 Components get added as needed and emphasize flexi-/scala-/accessi-bility.
 
 Until declared otherwise, this library targets an audience of one -- its author. Maybe someday it'll open up.
- 
 
 ## Install
 
@@ -22,14 +21,14 @@ npm install --save principled-ui2
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import MyComponent from 'principled-ui2'
-import 'principled-ui2/dist/index.css'
+import MyComponent from 'principled-ui';
+import 'principled-ui/dist/index.css';
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```

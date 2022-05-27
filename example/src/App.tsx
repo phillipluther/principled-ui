@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Button } from 'principled-ui';
+import Buttons from './buttons';
 import 'principled-ui/dist/index.css';
 
 const App = () => {
-  return <Button>Click Me</Button>;
+  return <Buttons />;
 };
 
 export default App;
